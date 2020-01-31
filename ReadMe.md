@@ -1,6 +1,8 @@
 ## minimodem - general-purpose software audio FSK modem
 Copyright (C) 2011-2016 Kamal Mostafa <kamal@whence.com>
 
+#### how to build this package for yourself on Linux (Debian/Ubuntu)
+
 ```
 sudo apt install libsndfile1-dev fftw3-dev libasound2-dev libpulse-dev
 sudo apt install pkg-config automake
@@ -9,12 +11,19 @@ aclocal
 autoconf
 autoheader
 automake --add-missing
+
 ./configure
 make
-
 sudo make install
 
 echo 'asdasdasdasd' | minimodem --tx 100
+
+# If it sounds really scratchy, like its clipping or something, try re-doing the build
+# but this time do
+
+./configure --without-pulseaudio
+make
+sudo make install
 
 ```
 
