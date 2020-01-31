@@ -1,5 +1,22 @@
-minimodem - general-purpose software audio FSK modem
+## minimodem - general-purpose software audio FSK modem
 Copyright (C) 2011-2016 Kamal Mostafa <kamal@whence.com>
+
+```
+sudo apt install libsndfile1-dev fftw3-dev libasound2-dev libpulse-dev
+sudo apt install pkg-config automake
+ 
+aclocal
+autoconf
+autoheader
+automake --add-missing
+./configure
+make
+
+sudo make install
+
+echo 'asdasdasdasd' | minimodem --tx 100
+
+```
 
 Minimodem is a command-line program which decodes (or generates) audio
 modem tones at any specified baud rate, using various framing protocols.
